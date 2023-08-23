@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    tools:context=".SecondFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2196F3"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frameLayout0"
+            android:layout_width="410dp"
+            android:layout_height="100dp"
+            android:background="#2196F3"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/total_text"
+                android:layout_width="140dp"
+                android:layout_height="58dp"
+                android:layout_gravity="start|center"
+                android:paddingBottom="10dp"
+                android:text="Total points:"
+                android:textAlignment="center"
+                android:textColor="#F6F0F0"
+                android:visibility="visible"
+                app:autoSizeTextType="uniform"
+                tools:visibility="visible" />
+
+            <EditText
+                android:id="@+id/totalPoints"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#F6F1F1"
+                android:textColorLink="#F3EBEB"
+                app:autoSizeTextType="uniform" />
+
+            <ImageButton
+                android:id="@+id/resetButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="20dp"
+                android:src="@android:drawable/ic_menu_revert" />
+        </FrameLayout>
+
+
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="416dp"
+            android:layout_height="900dp"
+            android:layout_marginTop="13dp"
+            android:background="#2196f3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+
+            <EditText
+                android:id="@+id/autonomousPoints"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/autonomous"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="400dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Autonomous:"
+                android:textColor="#F6F0F0"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/robot1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="0dp"
+                android:text="Robot 1 parked:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/robot2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="0dp"
+                android:text="Robot 2 parked:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/robotParking1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="0dp">
+
+                <RadioButton
+                    android:id="@+id/noPark1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_gravity="start"
+                    android:text="Didn't park"
+                    android:textColor="#F8FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radio_button_selector"/>
+
+                <RadioButton
+                    android:id="@+id/terminalPark1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="105dp"
+                    android:layout_marginTop="-56dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_selector"
+                    android:button="@android:color/transparent"
+                    android:text="Terminal"
+                    android:textColor="#F8FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/substationPark1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="167dp"
+                    android:layout_marginTop="-56dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_gravity="start"
+                    android:text="Substation"
+                    android:textColor="#F8FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radio_button_selector" />
+
+                <RadioButton
+                    android:id="@+id/noBonusPark1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_gravity="start"
+                    android:text="Correct Zone"
+                    android:textColor="#F8FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radio_button_selector" />
+
+                <RadioButton
+                    android:id="@+id/sleeveBonusPark1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_gravity="start"
+                    android:text="Correct Zone With Bonus Sleeve"
+                    android:textColor="#F8FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:button="@android:color/transparent"
+                    android:background="@drawable/radio_button_selector" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/robotParking2"
+                android:layout_width="match_parent"
+                android:layout_height="131dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="0dp">
+
+                <RadioButton
+                    android:id="@+id/noPark2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="Didn't park"
+                    android:textColor="#F8FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/terminalPark2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="-48dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="Terminal"
+                    android:textColor="#F8FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/substationPark2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="-48dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="Substation"
+                    android:textColor="#F8FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/noBonusPark2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="Correct Zone"
+                    android:textColor="#F8FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/sleeveBonusPark2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="Correct Zone With Bonus Sleeve"
+                    android:textColor="#F8FFFFFF"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/cones_terminal_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="547dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cones_ground_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="610dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cones_low_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="667dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cones_mid_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="740dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="33dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cones_high_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="810dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="34dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/cones"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="0dp"
+                android:text="Cones in:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/terminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="0dp"
+                android:text="Terminal:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginEnd="0dp"
+                android:text="Ground Junction:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="240dp"
+                android:layout_marginEnd="0dp"
+                android:text="Low Junction:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/mid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="310dp"
+                android:layout_marginEnd="0dp"
+                android:text="Medium Junction:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="380dp"
+                android:layout_marginEnd="0dp"
+                android:text="High Junction:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+           <Button
+                android:id="@+id/terminal_minus_auto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/terminal_plus_auto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton"/>
+
+            <Button
+                android:id="@+id/ground_minus_auto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/ground_plus_auto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton"/>
+
+            <Button
+                android:id="@+id/low_minus_auto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="240dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/low_plus_auto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="240dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton"/>
+
+            <Button
+                android:id="@+id/mid_minus_auto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="310dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/mid_plus_auto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="310dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton"/>
+
+            <Button
+                android:id="@+id/high_minus_auto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="380dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/high_plus_auto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="380dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="416dp"
+            android:layout_height="470dp"
+            android:layout_marginTop="16dp"
+            android:background="#2196f3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout0"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/teleopPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-110dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="100dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="300dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Teleop:"
+                android:textColor="#F6F0F0"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cones_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="-50dp"
+                android:text="Cones in:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/terminal_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="0dp"
+                android:text="Terminal:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ground_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="170dp"
+                android:layout_marginEnd="0dp"
+                android:text="Ground Junction:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/low_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="240dp"
+                android:layout_marginEnd="0dp"
+                android:text="Low Junction:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/mid_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="310dp"
+                android:layout_marginEnd="0dp"
+                android:text="Medium Junction:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/high_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="380dp"
+                android:layout_marginEnd="0dp"
+                android:text="High Junction:"
+                android:textColor="#F4F2F2"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cones_terminal_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cones_ground_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cones_low_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="230dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cones_mid_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cones_high_teleop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="370dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="28dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/terminal_minus_teleop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/terminal_plus_teleop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton"/>
+
+            <Button
+                android:id="@+id/ground_minus_teleop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/ground_plus_teleop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton"/>
+
+            <Button
+                android:id="@+id/low_minus_teleop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="230dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/low_plus_teleop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="230dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton"/>
+
+            <Button
+                android:id="@+id/mid_minus_teleop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/mid_plus_teleop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton"/>
+
+            <Button
+                android:id="@+id/high_minus_teleop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="370dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/high_plus_teleop"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="370dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton"/>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="412dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="13dp"
+            android:background="#2196f3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout1">
+
+            <EditText
+                android:id="@+id/endgamePoints"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="100dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0" />
+
+            <EditText
+                android:id="@+id/endgame"
+                android:layout_width="115dp"
+                android:layout_height="65dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="300dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Endgame:"
+                android:textColor="#F6F0F0" />
+
+            <CheckBox
+                android:id="@+id/checkCircuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="80dp"
+                android:text="Circuit Completed"
+                android:textColor="#F6F0F0"
+                android:textSize="16sp"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/checkTerminal1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="120dp"
+                android:text="Robot 1 parked in terminal"
+                android:textColor="#F6F0F0"
+                android:textSize="16sp"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/checkTerminal2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="160dp"
+                android:text="Robot 2 parked in terminal"
+                android:textColor="#F6F0F0"
+                android:textSize="16sp"
+                android:checked="false" />
+
+            <TextView
+                android:id="@+id/JunctionsOwned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="220dp"
+                android:text="Junctions owned by:"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/topCone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="270dp"
+                android:text="Top cone:"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/topConeNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="260dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/beacon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="330dp"
+                android:text="Beacon:"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/beaconNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="320dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/topConeMinus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="260dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/topConePlus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="260dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/beaconMinus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="320dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/beaconPlus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="320dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="409dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="13dp"
+            android:background="#2196f3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout3">
+
+            <EditText
+                android:id="@+id/pointsPenalties"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                tools:ignore="RtlCompat" />
+
+            <EditText
+                android:id="@+id/penalties"
+                android:layout_width="115dp"
+                android:layout_height="65dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="300dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Penalties:"
+                android:textColor="#F6F0F0" />
+
+            <EditText
+                android:id="@+id/minor"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="300dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Minor penalties:"
+                android:textColor="#F6F0F0" />
+
+            <EditText
+                android:id="@+id/major"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="300dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Major penalties:"
+                android:textColor="#F6F0F0" />
+
+            <EditText
+                android:id="@+id/minorPenalties"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="100dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                tools:ignore="RtlCompat" />
+
+            <EditText
+                android:id="@+id/majorPenalties"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="100dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#F6F0F0"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/minorMinus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/minorPlus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/majorMinus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_gravity="start"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+            <Button
+                android:id="@+id/majorPlus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:layout_gravity="start"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="0dp"
+                android:background = "@drawable/roundedbutton" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
